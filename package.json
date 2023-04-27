@@ -1,0 +1,18 @@
+{
+  "name": "@pollen-solutions/js-api-request",
+  "version": "v0.0.0",
+  "description": "Pollen Solutions - JS - Api Request",
+  "main": "index.js",
+  "module": "index.esm.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "pollen-solutions",
+    "js",
+    "api",
+    "request"
+  ],
+  "author": "Jordy Manner<jordy@presstify.com>",
+  "license": "MIT"
+}
