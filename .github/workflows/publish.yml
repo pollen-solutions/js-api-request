@@ -8,12 +8,10 @@ jobs:
       packages: write
     steps:
       - uses: actions/checkout@v3
-      # Setup .npmrc file to publish to GitHub Packages
       - uses: actions/setup-node@v3
         with:
-          node-version: '16.x'
+          node-version: 16.x
           registry-url: https://registry.npmjs.org/
-          # Defaults to the user or organization that owns the workflow file
           scope: '@pollen-solutions'
       - run: npm ci
       - name: publish
