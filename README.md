@@ -1,12 +1,12 @@
 # API Request
 
-[![Latest Stable Version](https://img.shields.io/npm/v/@pollen-solutions/js-api-request.svg?style=for-the-badge)](https://packagist.org/packages/pollen-solutions/js-api-request)
+[![Latest Stable Version](https://img.shields.io/npm/v/@pollen-solutions/api-request.svg?style=for-the-badge)](https://packagist.org/packages/pollen-solutions/js-api-request)
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)](LICENSE.md)
 
 ## Installation
 
 ```shell
-npm i @pollen-solutions/js-api-request
+npm i @pollen-solutions/api-request
 ```
 
 ## Usage 
@@ -16,7 +16,7 @@ This documentation uses the [API JSON placeholder](https://jsonplaceholder.typic
 ### Basic Usage
 
 ```javascript
-import {ApiRequest} from "@pollen-solutions/js-api-request"
+import {ApiRequest} from "@pollen-solutions/api-request"
 
 ApiRequest(
     'https://jsonplaceholder.typicode.com/posts', /** Endpoint url */
@@ -33,7 +33,7 @@ ApiRequest(
 ### Using promise return
 
 ```javascript
-import {ApiRequest} from "@pollen-solutions/js-api-request"
+import {ApiRequest} from "@pollen-solutions/api-request"
 
 ApiRequest('https://jsonplaceholder.typicode.com/posts', {
   _start: 0,
@@ -49,7 +49,7 @@ ApiRequest('https://jsonplaceholder.typicode.com/posts', {
 #### GET Request
 
 ```javascript
-import {ApiGet} from "@pollen-solutions/js-api-request"
+import {ApiGet} from "@pollen-solutions/api-request"
 
 ApiGet('https://jsonplaceholder.typicode.com/posts').then(json => console.log(json))
 ```
@@ -57,7 +57,7 @@ ApiGet('https://jsonplaceholder.typicode.com/posts').then(json => console.log(js
 #### POST Request
 
 ```javascript
-import {ApiPost} from "@pollen-solutions/js-api-request"
+import {ApiPost} from "@pollen-solutions/api-request"
 
 ApiPost('https://jsonplaceholder.typicode.com/posts', {
   title: 'foo',
@@ -69,7 +69,7 @@ ApiPost('https://jsonplaceholder.typicode.com/posts', {
 #### PUT Request
 
 ```javascript
-import {ApiPut} from "@pollen-solutions/js-api-request"
+import {ApiPut} from "@pollen-solutions/api-request"
 
 ApiPut('https://jsonplaceholder.typicode.com/posts/1', {
   id: 1,
@@ -82,7 +82,7 @@ ApiPut('https://jsonplaceholder.typicode.com/posts/1', {
 #### PATCH Request 
 
 ```javascript
-import {ApiPatch} from "@pollen-solutions/js-api-request"
+import {ApiPatch} from "@pollen-solutions/api-request"
 
 ApiPatch('https://jsonplaceholder.typicode.com/posts/1', {
   title: 'foo',
@@ -92,7 +92,7 @@ ApiPatch('https://jsonplaceholder.typicode.com/posts/1', {
 #### DELETE Request
 
 ```javascript
-import {ApiDelete} from "@pollen-solutions/js-api-request"
+import {ApiDelete} from "@pollen-solutions/api-request"
 
 ApiDelete('https://jsonplaceholder.typicode.com/posts/1')
 ```
