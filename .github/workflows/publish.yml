@@ -12,11 +12,11 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '16.x'
-          registry-url: 'https://registry.npmjs.org'
+          registry-url: https://registry.npmjs.org/
           # Defaults to the user or organization that owns the workflow file
-          #scope: '@pollen-solutions'
+          scope: '@pollen-solutions'
       - run: npm ci
       - name: publish
         run: npm publish --access public
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+          NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
