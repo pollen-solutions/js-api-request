@@ -12,7 +12,7 @@ jobs:
         with:
           node-version: 16.x
           registry-url: https://registry.npmjs.org/
-          scope: @pollen-solutions
+          scope: '@pollen-solutions'
       - run: npm ci
       - name: publish
         run: npm publish --access public
