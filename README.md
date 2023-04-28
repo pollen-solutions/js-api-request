@@ -1,6 +1,6 @@
 # API Request
 
-[![Latest Stable Version](https://img.shields.io/npm/v/@pollen-solutions/api-request.svg?style=for-the-badge)](https://packagist.org/packages/pollen-solutions/js-api-request)
+[![Latest Stable Version](https://img.shields.io/npm/v/@pollen-solutions/api-request.svg?style=for-the-badge)](https://www.npmjs.com/package/@pollen-solutions/api-request)
 [![MIT Licensed](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)](LICENSE.md)
 
 ## Installation

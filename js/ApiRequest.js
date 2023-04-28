@@ -64,8 +64,6 @@ export const ApiRequest = function (endpoint = null, data = {}, method = 'GET', 
   })
 }
 
-export default ApiRequest
-
 /**
  * @param {URL|string|null} endpoint
  * @param {FormData|Object<string, string>} data

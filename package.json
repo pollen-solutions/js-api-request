@@ -1,6 +1,6 @@
 {
   "name": "@pollen-solutions/api-request",
-  "version": "v0.0.0",
+  "version": "v0.0.1",
   "description": "Pollen Solutions - JS - Api Request",
   "main": "index.js",
   "module": "index.esm.js",
