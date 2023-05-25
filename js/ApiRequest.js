@@ -1,14 +1,4 @@
 /**
- * @see https://www.aleksandrhovhannisyan.com/blog/serializing-html-form-data-with-javascript/
- *
- * @param {Object<string, string>|FormData} data
- * @return {string}
- */
-const serializeData = function (data) {
-  return new URLSearchParams(data).toString()
-}
-
-/**
  * @param {URL|string|null} endpoint
  * @param {FormData|Object<string, string>} data
  * @param {('DELETE'|'GET'|'HEAD'|'OPTIONS'|'PATCH'|'POST'|'PUT')} method
@@ -43,12 +33,17 @@ export const ApiRequest = function (endpoint = null, data = {}, method = 'GET', 
 
   if (request.method !== 'GET' && request.method !== 'HEAD') {
     if (data instanceof FormData) {
-      request.body = serializeData(data)
+      request.body = new URLSearchParams(data).toString()
     } else {
       request.body = JSON.stringify(data)
     }
   } else {
-    url.search = serializeData(data)
+    const combined = new URLSearchParams({
+      ...Object.fromEntries(new URLSearchParams(url.search)),
+      ...Object.fromEntries(new URLSearchParams(data))
+    })
+
+    url.search = combined.toString()
   }
 
   return fetch(url.toString(), request).then(function (response) {
